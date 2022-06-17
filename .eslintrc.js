@@ -2,11 +2,12 @@
 module.exports = {
   extends: [
     'airbnb-base',
-    'next/core-web-vitals',
     'plugin:prettier/recommended',
+    'next/core-web-vitals',
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
+    'prettier/prettier': 'error',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -19,7 +20,8 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': 'off',
     'no-shadow': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'no-use-before-define': 'off',
   },
 };

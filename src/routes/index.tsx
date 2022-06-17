@@ -6,10 +6,12 @@ const About = React.lazy(() => import('src/components/About'));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <React.Suspense fallback={<div>loading bruh</div>}>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </React.Suspense>
   );
 }
 

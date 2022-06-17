@@ -14,6 +14,14 @@ const nextConfig = {
       '/': { page: nextjsMatchAll },
     };
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:8000/api/:path*',
+      },
+    ];
+  },
   webpack: (config, options) => {
     const { dev, isServer } = options;
     // only compress client assets in production mode.
