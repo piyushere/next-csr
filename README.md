@@ -1,4 +1,4 @@
-# A Next.JS boilorplate tailored for SPA (Single page applications).
+# A Next.JS boilorplate tailored for CSR (Client side rendering).
 
 ## Features
 
